@@ -6,10 +6,16 @@ phases:
       - echo Installing Nginx
       - sudo apt-get update
       - sudo apt-get install nginx -y
+      - echo Installing html-validator-cli
+      - npm install -g html-validator-cli
   build:
     commands:
       - echo Build started on `date`
       - cp index.html /var/www/html/
+  test:
+    commands:
+      - echo Validating index.html
+      - html-validator /var/www/html/index.html
   post_build:
     commands:
       - echo Configuring Nginx
