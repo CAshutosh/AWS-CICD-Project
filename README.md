@@ -8,7 +8,8 @@ Our CI/CD pipeline is designed to automate the build, test, and deployment proce
 
 `	`3. Test stage: The test stage will run the tests against the built artifact to ensure that everything is working as expected. Here, we are using AWS CodeBuild for running the tests.
 
-`	`4. Deploy stage: The deploy stage will deploy the built and tested application to the EC2 instance. Here, we are using AWS CodeDeploy for deploying the application.
+`	`4. Deploy stage: The deploy stage will deploy the built and tested application to the EC2 instance. Here, we are using AWS CodeDeploy for deploying the application,
+and used AWS CodePipeline to integrate all the above stages.
 
 Overview of each of the phases in the buildspec.yml file: buildspec.yml file is used by AWS Code Build to build and test the source code and creates artifact.
 
